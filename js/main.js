@@ -27,7 +27,7 @@ var data = [
 
 var restore = [];
 
-var recipeEl = document.querySelector('#recipes');
+var recipeEl = document.getElementById('recipes');
 var displayName = document.querySelector('#displayRecipeName');
 var displayIng = document.querySelector('#displayIngredients');
 var displayDet = document.querySelector('#displayDetails');
