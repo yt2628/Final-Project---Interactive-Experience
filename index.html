@@ -1,0 +1,95 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/67f900d610.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron">
+  <div class="container">
+
+    <h1>Let's Bake!</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="legend">
+      <p>Click on the recipe name to see detailed recipes! Or add your own recipe <span><i class="far fa-laugh-beam"></i></span></p>
+      <p>Level of difficulty:  <span><i class="far fa-star"></i></span> Beginner <span><i class="fas fa-star-half-alt"></i></span> Normal <span><i class="fas fa-star"></i></span> Advanced</p>
+
+
+    </div>
+    <ul id="recipes" class="list-inline">
+
+    </ul>
+
+    <div class="buttonGroup">
+      <button onclick="removeConfirm()" class="btn btn-danger center-block hide" id="removeConfirmBtn">Remove!</button>
+    </div>
+    <div class="buttonGroup">
+      <button onclick="addMyRecipe()" class="btn btn-info">Add My Recipe</button>
+      <button onclick="removeStart()" class="btn btn-primary">Remove Finished Recipe</button>
+      <p>Deleted your recipe by accident? <span onclick="restoreRecipe()" id="restore">Restore!</span> </p>
+    </div>
+
+
+    <form>
+     <div class="hide" id="formAdd">
+      <div class="form-group">
+        <label for="recipeName">Recipe Name</label>
+        <input type="text" class="form-control" id="recipeName" placeholder="e.g. Sweet potatoes" onclick="resetName()">
+      </div>
+      <div class="form-group">
+        <label for="ingredients">Ingredients</label>
+        <input type="text" class="form-control" id="ingredients" placeholder="e.g. Potatoes, Butter, Water" onclick="resetIng()">
+      </div>
+      <div class="form-group">
+        <label for="details">Detailed Steps</label>
+        <textarea class="form-control rounded-0" id="details" rows="6" placeholder="1. Step 1 &#10;2. Step 2 &#10;3. Step 3" onclick="resetDet()"></textarea>
+      </div>
+      <div class="form-group">
+        <strong>Level of difficulty</strong>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="radio">
+              <label for="beginner"><input type="radio" name="difficulty" onclick="inputDifficulty()" value="1">Beginner</label>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="radio">
+              <label for="normal"><input type="radio" name="difficulty" onclick="inputDifficulty()" value="2">Normal</label>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="radio">
+              <label for="advanced"><input type="radio" name="difficulty" onclick="inputDifficulty()" value="3">Advanced</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-success" onclick="submitRecipe()">Submit</button>
+      <p id="reminder"></p>
+     </div>
+    </form>
+
+
+    <div class="display">
+      <div id="displayRecipeName">
+      </div>
+      <div id="displayIngredients">
+      </div>
+      <div id="displayDetails">
+      </div>
+    </div>
+
+    <div id="bottom">
+      <p class="text-center"><strong>Happy Coding!</strong></p>
+      <p class="text-center"> <i>Yiqun Tao 2019 June. 30</i></p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
