@@ -91,14 +91,28 @@
     </div>
 
   </div>
+
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/6.3.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#reserved-urls -->
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#config-web-app -->
 
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBze0aDkpvmyFPPQokRpgF1Ew67EZJktQc",
+      authDomain: "project1-af3d2.firebaseapp.com",
+      databaseURL: "https://project1-af3d2.firebaseio.com",
+      projectId: "project1-af3d2",
+      storageBucket: "project1-af3d2.appspot.com",
+      messagingSenderId: "962384938272",
+      appId: "1:962384938272:web:db7da5145ddbae14"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
  <script src="js/main.js"></script>
 </body>
 
